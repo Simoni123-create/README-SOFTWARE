@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    width:350px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+#message{
+    text-align:center;
+    margin-top:15px;
+    color:green;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <select id="gender">
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <button onclick="register()">Register</button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+function register(){
+    let name=document.getElementById("name").value;
+    let email=document.getElementById("email").value;
+    let password=document.getElementById("password").value;
+    let gender=document.getElementById("gender").value;
+
+    if(name=="" || email=="" || password=="" || gender==""){
+        document.getElementById("message").innerHTML="Please fill all fields";
+        document.getElementById("message").style.color="red";
+    }
+    else{
+        document.getElementById("message").innerHTML="Registration Successful";
+        document.getElementById("message").style.color="green";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Compiled Java class files
+*.class
+
+# Selenium JARs (large files, downloadable from selenium.dev)
+libs/
+
+# ChromeDriver binary (OS-specific, should not be shared)
+chromedriver-win64/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+*.suo
+.vs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache (for your .py files)
+_pycache_/
+*.pyc
+*.pyo
